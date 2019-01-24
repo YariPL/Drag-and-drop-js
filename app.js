@@ -22,7 +22,7 @@ $('.grid-item').droppable({
    console.log(e);
    console.log(e.originalEvent.target);
    console.log(e.target);
-	grids[e.originalEvent.target.id] = e.originalEvent.target.src;
+	grids[e.target.id] = e.originalEvent.target.src;
 
 
 	console.log(grids);
