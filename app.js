@@ -20,17 +20,21 @@ console.log(grids.length);
 $('ol').draggable();
 $('#grid-container > div').droppable({
   drop: function(e) {
-  console.log('drop!');
+ /* console.log('drop!');
    console.log(e);
    console.log(e.originalEvent.target);
-   console.log(e.target);
+   console.log(e.target);*/
 
-   var div = $(this);
 
-   var id =div.attr("data-id") * 1;
-
+	var id = $(this).attr("data-id") * 1;
 	grids[id] = e.originalEvent.target.src ? e.originalEvent.target.src : e.originalEvent.target.querySelector('img').src;
-
+	$(this).html('<img src="'+grids[id]+'" alt="image:)">');
+	$(e.originalEvent.target).css({
+        top: "0px",
+        left: "0px"
+    });
+    e.originalEvent.target.style.top = '0px';
+    e.originalEvent.target.style.left = '0px';
   }
 });
 
@@ -38,5 +42,4 @@ $('#grid-container > div').droppable({
 
 $('.save').on('click',function() {
 	window.localStorage.setItem('grids', JSON.stringify(grids));
-/*	console.log(localStorage);
-*/});
+});
