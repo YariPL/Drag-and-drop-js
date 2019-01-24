@@ -20,6 +20,10 @@ ul {
 	float: right;
     width: 30%;
 }
+ol{
+	background-color: red;
+	width: fit-content;
+}
 img {
 	width: 100px;
 }
