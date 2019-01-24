@@ -1,4 +1,4 @@
-.grid-container {
+#grid-container {
   display: grid;
   grid-template-columns: 200px 200px 200px;
   width: fit-content;
@@ -7,7 +7,7 @@
   float:left;
   width: 60%;
 }
-.grid-item {
+#grid-container >div {
   background-color: wheat;
   border: 1px solid rgba(0, 0, 0, 1);
   font-size: 30px;
@@ -19,6 +19,7 @@
 ul {
 	float: right;
     width: 30%;
+    touch-action:none;
 }
 ol{
 	background-color: red;

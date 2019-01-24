@@ -3,8 +3,10 @@ if(window.localStorage.grids){
 	window.onload = function() {
 		var grids = JSON.parse(window.localStorage.getItem("grids"));
 		console.log(grids);
-console.log(grids.length);
-
+		console.log(grids.length);
+		for (let i =0 ; i<grids.length;i++) {
+			$('#grid-container > div').eq(i).find("img").attr("src", grids[i]);
+		}
 	}
 } else {
 	var grids = [];
@@ -16,17 +18,19 @@ console.log(grids.length);
 
 
 $('ol').draggable();
-$('.grid-item').droppable({
+$('#grid-container > div').droppable({
   drop: function(e) {
-   console.log('drop!');
+  console.log('drop!');
    console.log(e);
    console.log(e.originalEvent.target);
    console.log(e.target);
-	grids[e.target.id] = e.originalEvent.target.src;
 
+   var div = $(this);
 
-	console.log(grids);
-console.log(grids.length);
+   var id =div.attr("data-id") * 1;
+
+	grids[id] = e.originalEvent.target.src ? e.originalEvent.target.src : e.originalEvent.target.querySelector('img').src;
+
   }
 });
 
@@ -34,5 +38,5 @@ console.log(grids.length);
 
 $('.save').on('click',function() {
 	window.localStorage.setItem('grids', JSON.stringify(grids));
-	console.log(localStorage);
-});
+/*	console.log(localStorage);
+*/});
