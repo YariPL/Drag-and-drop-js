@@ -30,7 +30,8 @@ $('#grid-container > div').droppable({
 
 	var id = $(this).attr("data-id") * 1;
 	grids[id] = ev.target.src ? e.originalEvent.target.src : e.originalEvent.target.querySelector('img').src;
-	$(this).html('<img src="'+grids[id]+'" alt="image">');
+	$(this).html('<img src="'+grids[id]+'" alt="image"><div class="delete"> X </div>');
+
 	
     console.log(e.originalEvent.target);
     console.log(e.originalEvent.originalEvent.target.parentElement);
@@ -44,6 +45,13 @@ $('#grid-container > div').droppable({
 		e.originalEvent.target.style.top = '0px';
 	    e.originalEvent.target.style.left = '0px';
 	}
+	$('.delete').on('click', function(e) {
+		console.log('alert!deleting')
+		console.log(e);
+		console.log(e.target.parentElement.attributes['data-id'].value);
+		e.target.parentElement.querySelector('img').src = '';
+		grids[e.target.parentElement.attributes['data-id'].value] = '';
+	});
   }
 });
 
@@ -52,3 +60,4 @@ $('#grid-container > div').droppable({
 $('.save').on('click',function() {
 	window.localStorage.setItem('grids', JSON.stringify(grids));
 });
+

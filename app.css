@@ -9,7 +9,7 @@
 }
 #grid-container >div {
   background-color: wheat;
-
+	position: relative;
   font-size: 30px;
   text-align: center;
   height: 180px;
@@ -32,8 +32,8 @@ ol{
 	width: fit-content;
 }
 img {
-	width: 100px;
-	touch-action:none;
+    width: 100%;
+    touch-action:none;
 }
 .save {
 	background:red;
@@ -41,4 +41,13 @@ img {
 	color: white;
 	clear: both;
 	width: fit-content;
+}
+.delete {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: red;
+	font-size: 12px;
+	padding: 12px;
+	cursor: pointer;
 }
