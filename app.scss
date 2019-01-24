@@ -1,0 +1,47 @@
+#grid-container {
+	display: grid;
+	grid-template-columns: 200px 200px 200px;
+	width: fit-content;
+	margin: 0 auto;
+	float:left;
+	width: 60%;
+	div {
+		background-color: wheat;
+		position: relative;
+		font-size: 30px;
+		text-align: center;
+		height: 180px;
+		margin:10px;
+		img{
+			width: 100%;
+		}
+		.delete {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: red;
+			font-size: 12px;
+			padding: 12px;
+			cursor: pointer;
+			color:white;
+		}
+	}
+}
+ul {
+	float: right;
+	width: 30%;
+	touch-action:none;
+	ol{
+		width: fit-content;
+		img {
+			width: 100px;
+		}
+	}
+}
+.save {
+	background:red;
+	padding: 10px;
+	color: white;
+	clear: both;
+	width: fit-content;
+}

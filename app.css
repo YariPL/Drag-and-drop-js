@@ -1,50 +1,50 @@
 #grid-container {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 200px 200px 200px;
   grid-template-columns: 200px 200px 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
- /* padding: 10px;*/
   margin: 0 auto;
-  float:left;
-  width: 60%;
-}
-#grid-container >div {
-  background-color: wheat;
-  position: relative;
-  font-size: 30px;
-  text-align: center;
-  height: 180px;
-  margin:10px;
+  float: left;
+  width: 60%; }
+  #grid-container div {
+    background-color: wheat;
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    height: 180px;
+    margin: 10px; }
+    #grid-container div img {
+      width: 100%; }
+    #grid-container div .delete {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: red;
+      font-size: 12px;
+      padding: 12px;
+      cursor: pointer;
+      color: white; }
 
-}
-img {
-    width: 100px;
-}
-#grid-container >div img{
-  width: 100%;
-
-}
 ul {
-	float: right;
-    width: 30%;
-    touch-action:none;
-}
-ol{
-	width: fit-content;
-}
+  float: right;
+  width: 30%;
+  -ms-touch-action: none;
+  touch-action: none; }
+  ul ol {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+    ul ol img {
+      width: 100px; }
+
 .save {
-	background:red;
-	padding: 10px;
-	color: white;
-	clear: both;
-	width: fit-content;
-}
-.delete {
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: red;
-	font-size: 12px;
-	padding: 12px;
-	cursor: pointer;
-	color:white;
-}
+  background: red;
+  padding: 10px;
+  color: white;
+  clear: both;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
