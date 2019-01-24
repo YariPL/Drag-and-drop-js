@@ -26,13 +26,12 @@
       font-size: 12px;
       padding: 12px;
       cursor: pointer;
-      color: white; }
+      color: white;
+      height: auto; }
 
 ul {
   float: right;
-  width: 30%;
-  -ms-touch-action: none;
-  touch-action: none; }
+  width: 30%; }
   ul ol {
     width: -webkit-fit-content;
     width: -moz-fit-content;

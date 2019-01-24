@@ -1,6 +1,3 @@
-		console.log('ss1')
-
-
 if(window.localStorage.grids){
 	var grids = JSON.parse(window.localStorage.getItem("grids"));
 	for (let i =0 ; i<grids.length;i++) {
@@ -32,6 +29,10 @@ $('#grid-container > div').droppable({
 		e.originalEvent.target.style.top = '0px';
 	    e.originalEvent.target.style.left = '0px';
 	}
+	$('.delete').on('click', function(e) {
+		e.target.parentElement.querySelector('img').src = '';
+		grids[e.target.parentElement.attributes['data-id'].value] = '';
+	});
 
   }
 });
@@ -41,6 +42,6 @@ $('.save').on('click',function() {
 });
 
 $('.delete').on('click', function(e) {
-		e.target.parentElement.querySelector('img').src = '';
-		grids[e.target.parentElement.attributes['data-id'].value] = '';
-	});
+	e.target.parentElement.querySelector('img').src = '';
+	grids[e.target.parentElement.attributes['data-id'].value] = '';
+});
