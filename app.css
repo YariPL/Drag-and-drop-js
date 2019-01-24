@@ -27,3 +27,10 @@ ol{
 img {
 	width: 100px;
 }
+.save {
+	background:red;
+	padding: 10px;
+	color: white;
+	clear: both;
+	width: fit-content;
+}
