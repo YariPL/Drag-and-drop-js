@@ -9,31 +9,27 @@
 }
 #grid-container >div {
   background-color: wheat;
-	position: relative;
+  position: relative;
   font-size: 30px;
   text-align: center;
   height: 180px;
   margin:10px;
 
 }
-
+img {
+    width: 100px;
+}
 #grid-container >div img{
-  vertical-align: middle;
+  width: 100%;
 
 }
-
 ul {
 	float: right;
     width: 30%;
     touch-action:none;
 }
 ol{
-	background-color: red;
 	width: fit-content;
-}
-img {
-    width: 100%;
-    touch-action:none;
 }
 .save {
 	background:red;
@@ -50,4 +46,5 @@ img {
 	font-size: 12px;
 	padding: 12px;
 	cursor: pointer;
+	color:white;
 }
