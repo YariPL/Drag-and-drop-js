@@ -16,7 +16,6 @@
 			width: 100%;
 		}
 		.delete {
-			display: none;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -32,7 +31,7 @@
 ul {
 	float: right;
 	width: 30%;
-	ol{
+	li{
 		width: fit-content;
 		img {
 			width: 100px;

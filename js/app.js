@@ -2,7 +2,6 @@ if(window.localStorage.grids){
 	var grids = JSON.parse(window.localStorage.getItem("grids"));
 	for (let i =0 ; i<grids.length;i++) {
 		$('#grid-container > div').eq(i).find("img").attr("src", grids[i]);
-		$('#grid-container > div').eq(i).find(".delete").show();
 
 	}
 } else {

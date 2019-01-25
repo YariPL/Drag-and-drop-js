@@ -32,11 +32,11 @@
 ul {
   float: right;
   width: 30%; }
-  ul ol {
+  ul li {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content; }
-    ul ol img {
+    ul li img {
       width: 100px; }
 
 .save {
