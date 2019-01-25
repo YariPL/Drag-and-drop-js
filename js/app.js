@@ -2,14 +2,13 @@ if(window.localStorage.grids){
 	var grids = JSON.parse(window.localStorage.getItem("grids"));
 	for (let i =0 ; i<grids.length;i++) {
 		$('#grid-container > div').eq(i).find("img").attr("src", grids[i]);
-
 	}
 } else {
 	var grids = [];
 	grids.length = 9;
 }
 
-$('ol').draggable();
+$('li').draggable();
 $('#grid-container > div').droppable({
 	drop: function(e) {
 	var ev = e.originalEvent;

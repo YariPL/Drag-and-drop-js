@@ -32,6 +32,7 @@ ul {
 	float: right;
 	width: 30%;
 	li{
+		list-style: none;
 		width: fit-content;
 		img {
 			width: 100px;
@@ -44,4 +45,7 @@ ul {
 	color: white;
 	clear: both;
 	width: fit-content;
+}
+.hide {
+	display: none;
 }
