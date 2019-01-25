@@ -29,15 +29,15 @@
       color: white;
       height: auto; }
 
-ul {
+#draggableList ul {
   float: right;
   width: 30%; }
-  ul li {
+  #draggableList ul li {
     list-style: none;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content; }
-    ul li img {
+    #draggableList ul li img {
       width: 100px; }
 
 .save {
