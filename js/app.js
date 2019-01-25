@@ -7,19 +7,14 @@ if(window.localStorage.grids){
 	var grids = [];
 	grids.length = 9;
 }
-		console.log('ss1')
 
 $('ol').draggable();
 $('#grid-container > div').droppable({
-
 	drop: function(e) {
-		console.log('ss2')
-
 	var ev = e.originalEvent;
 
 	var id = $(this).attr("data-id") * 1;
 	grids[id] = ev.target.src ? e.originalEvent.target.src : e.originalEvent.target.querySelector('img').src;
-	console.log('ss3')
 	$(this).html('<img src="'+grids[id]+'" alt="image"><div class="delete"> X </div>');
 
     if(e.originalEvent.target.localName == 'img') {
@@ -33,7 +28,6 @@ $('#grid-container > div').droppable({
 		e.target.parentElement.querySelector('img').src = '';
 		grids[e.target.parentElement.attributes['data-id'].value] = '';
 	});
-
   }
 });
 
